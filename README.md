@@ -6,3 +6,5 @@
 A simple web application to upload, search, edit and view the data.
 
 Note: CSV files are only allowed to upload the data
+
+Technologies : HTML5,CSS3,ReactJS,NOdeJS and MongoDb
