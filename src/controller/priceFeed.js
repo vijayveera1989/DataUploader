@@ -11,6 +11,10 @@ const getAllPriceFeeds = async (req, res, next) => {
    // let count = await PriceFeed.count();
     //console.log(count);
     const { limit = 0, skip = 0 } = req.query;
+	
+	if(limit>100){ // validate and overwrite the limit if it is beyond the threshold in server side 
+		limit = 100;
+	}
     const facetedPipeline = [
       {
         "$facet": {
